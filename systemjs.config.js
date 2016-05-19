@@ -20,7 +20,7 @@
 
     //packages tells the System loader how to load when no filename and/or no extension
     var packages = {
-        'app': { main: './app/main.ts', defaultExtension: 'ts' },
+        'app': { main: 'main.ts', defaultExtension: 'ts' },
         'rxjs': { defaultExtension: 'js' },
         'angular2-in-memory-web-api': { defaultExtension: 'js' },
     };
@@ -45,6 +45,7 @@
 
     // Add package entries for angular packages
     ngPackageNames.forEach(function (pkgName) {
+
 
         // Bundled (~40 requests):
         packages['@angular/' + pkgName] = { main: pkgName + '.umd.js', defaultExtension: 'js' };
